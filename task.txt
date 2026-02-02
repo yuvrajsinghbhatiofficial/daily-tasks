@@ -1,0 +1,21 @@
+ready table
+    user 
+        name
+        email
+        password
+ready frontend
+    Task:
+        Login Form
+            UI Form
+            Api hit post
+            Error handling 
+            show errors on UI
+ready backend
+    Create server
+    Apis Create
+    Login api post method
+        JWt implement
+        input field email
+         on type : 
+        get req with valuez
+
