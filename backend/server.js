@@ -1,18 +1,23 @@
 const express = require ('express');
 const http = require('http');
 const app = express();
-const userRoutes = require('./routes/user.js');
+require("dotenv").config();
+const db = require('./app/models/db.js')
+const userRoutes = require('./app/routes/user.js');
 const cors = require ('cors');
+
 
 
 app.use(cors());
 app.use(express.json())
-app.use('/users', userRoutes);
+app.use('/login', userRoutes);
 
 
 app.get('/',(req,res ) =>{
     res.send('hello world');
 });
+
+
 
 
 

@@ -19,3 +19,22 @@ ready backend
          on type : 
         get req with valuez
 
+
+
+day: 2 of assignment (login system with jwt)
+pending:
+1: payload communication b/w frontend and backend 
+implementing JWT
+UI optimization of Login page
+logout button
+
+complete:
+./login ./dashboard app routes 
+axios implementing 
+form actions 
+dashboard UI
+
+inProgress;
+implement jwt in backend to stare seesion token for the user 
+getting response from api to enable navigation in frontend 
+creating sql query to authenticate the user 
