@@ -9,11 +9,11 @@ const JWT_SECRET = 'supersecretkey';
 
 
 router.post('/login',async(req,res)=>{
-    const {email,pass} = req.body;
-    if ( !email || !pass ){
+    const {email,password} = req.body;
+    if ( !email || !password ){
         return res.status(400).json({
             "success":false,
-            "message":'the email and password are incorrect'
+            "message":'insert required credentials'
         });
     }
    const user = await findByEmail(email);
@@ -21,14 +21,14 @@ router.post('/login',async(req,res)=>{
         if (!user) {
             return res.status(401).json({
                 success: false,
-                message: 'Invalid email'
+                message: 'you are not a valid No account found with that email address. Please sign up or check your spelling'
             });
         }
        
-         if (user.pass !== pass) {
+         if (user.password !== password) {
             return res.status(401).json({
                 success: false,
-                message: 'Invalid email or password',
+                message: 'Invalid password',
             });
         }
         //JWT implementing 

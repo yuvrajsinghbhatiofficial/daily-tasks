@@ -10,8 +10,9 @@ const cors = require ('cors');
 
 app.use(cors());
 app.use(express.json())
-app.use('/login', userRoutes);
-
+app.use('/api', userRoutes);
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.get('/',(req,res ) =>{
     res.send('hello world');
