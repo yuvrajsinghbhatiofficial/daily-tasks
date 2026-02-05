@@ -100,6 +100,9 @@ function Login() {
                                     placeholder="Enter your email"
                                     required
                                 />
+                                <div className=" mt-1 text-danger"  >
+                                    {error} 
+                                </div>
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="password" className="form-label">Password</label>

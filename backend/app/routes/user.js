@@ -21,7 +21,7 @@ router.post('/login',async(req,res)=>{
         if (!user) {
             return res.status(401).json({
                 success: false,
-                message: 'you are not a valid No account found with that email address. Please sign up or check your spelling'
+                message: 'No account found with this email address. Please sign up or check your spelling'
             });
         }
        
